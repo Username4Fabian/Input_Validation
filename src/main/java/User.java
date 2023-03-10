@@ -5,14 +5,14 @@ public class User {
 
     private String firstName;
     private String lastName;
-    private LocalDate birthDay;
-    private int zipCode;
-    private int phoneNumber;
+    private String birthDay;
+    private String zipCode;
+    private String phoneNumber;
     private String password;
     private String reenter;
 
 
-    public User(String firstName, String lastName, LocalDate birthDay, int zipCode, int phoneNumber, String password, String reenter) {
+    public User(String firstName, String lastName, String birthDay, String zipCode, String phoneNumber, String password, String reenter) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDay = birthDay;
@@ -42,27 +42,27 @@ public class User {
         lastName = lastName;
     }
 
-    public LocalDate getBirthDay() {
+    public String getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(LocalDate birthDay) {
+    public void setBirthDay(String birthDay) {
         this.birthDay = birthDay;
     }
 
-    public int getZipCode() {
+    public String getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(int zipCode) {
+    public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

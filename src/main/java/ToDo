@@ -1,0 +1,20 @@
+Create a form with input validation
+
+Create a simple sign-up form for users either as a console application or as a JavaFx Form
+
+Following fields have to be included
+
++ (Required) Firstname (Only A-Z or a-z allowed including blank, no other characters, maximum length 64 chars)
+
++ (Required) Lastname (Only A-Z or a-z allowed including blank, no other characters, maximum length 64 chars)
+
++ (Optional) Birthday (DD.MM.YYYY) - stored as LocalDate
+
++ (Optional) Zip Code (Only 0-9 allowed, max 4 chars)
+
++ (Required) Phone Number (+43 676 12345678)
+
++ (Required) Password (min 8 length, min. one special Character, one digit and one capital letter)
++ (Required) Reenter of Password
+
+your program always has to be in a defined state - as long as it crashes the task is not completed
