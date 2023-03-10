@@ -6,4 +6,9 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - Input_Validation</name>
   <url>http://maven.apache.org</url>
+    <properties>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+    </properties>
 </project>
+
