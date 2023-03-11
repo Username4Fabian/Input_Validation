@@ -7,9 +7,19 @@ import java.util.Scanner;
 public class Input_Validation {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
+        boolean redo = true;
 
-      Input();
+        System.out.println("Input_Validation");
+        System.out.println("--------------------------------");
 
+        do{
+            Input();
+            System.out.println("Re-Do input validation? (yes/no)");
+            String redo_input= sc.nextLine().toLowerCase();
+            if(redo_input.equals("no")){
+                redo=false;
+            }
+        }while (!redo==false);
     }
 
     public static boolean Input(){
@@ -21,9 +31,6 @@ public class Input_Validation {
         String password = "";
         String reEnter = "";
         User user = new User(firstName, lastName, date_str, zipCode, phoneNumber, password, reEnter);
-
-        System.out.println("Required: ");
-        System.out.println("---------------------");
 
         //FirstName
         do{
@@ -75,7 +82,7 @@ public class Input_Validation {
     }
     public static boolean checkName(User user) {
 
-        System.out.println(user.getFirstName());
+        //System.out.println(user.getFirstName());
 
         if (user.getFirstName().length() > 64 || user.getlastName().length() > 64) {
             return false;
