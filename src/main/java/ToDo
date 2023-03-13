@@ -17,4 +17,4 @@ Following fields have to be included
 + (Required) Password (min 8 length, min. one special Character, one digit and one capital letter)
 + (Required) Reenter of Password
 
-your program always has to be in a defined state - as long as it crashes the task is not completed
++ your program always has to be in a defined state - as long as it crashes the task is not completed
