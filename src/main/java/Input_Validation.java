@@ -32,19 +32,23 @@ public class Input_Validation {
         String reEnter = "";
         User user = new User(firstName, lastName, date_str, zipCode, phoneNumber, password, reEnter);
 
-        //FirstName
+        //FirstName / LastName
         do{
             System.out.println("Enter your Firstname:");
             firstName = sc.nextLine();
             user.setFirstName(firstName);
-        }while(checkName(user) ==false);
 
-        //LastName
-        do{
             System.out.println("Enter your Lastname:");
             lastName = sc.nextLine();
             user.setLastName(lastName);
         }while(checkName(user) ==false);
+
+        //LastName
+      /*  do{
+            System.out.println("Enter your Lastname:");
+            lastName = sc.nextLine();
+            user.setLastName(lastName);
+        }while(checkName(user) ==false); */
 
         //Date
         do{
@@ -72,17 +76,19 @@ public class Input_Validation {
             System.out.println("Enter your Password:");
             password = sc.nextLine();
             user.setPassword(password);
-            System.out.println("Re-Enter your Password: ");
-            reEnter = sc.nextLine();
-            user.setReenter(reEnter);
-        }while(checkPassword(user) ==false && reCheckPassword(user) ==false);
+
+            if(checkPassword(user) ==true){
+                System.out.println("Re-Enter your Password: ");
+                reEnter = sc.nextLine();
+                user.setReenter(reEnter);
+            }
+
+        }while(reCheckPassword(user) ==false);
 
 
         return true;
     }
     public static boolean checkName(User user) {
-
-        //System.out.println(user.getFirstName());
 
         if (user.getFirstName().length() > 64 || user.getlastName().length() > 64) {
             return false;
@@ -100,6 +106,7 @@ public class Input_Validation {
             }
             return true;
         }
+
         for (int i = 0; i < len2; i++) {
             if ((Character.isLetter(user.getlastName().charAt(i)) == false)) {
                 return false;
@@ -166,7 +173,7 @@ public class Input_Validation {
     }
 
     public static boolean checkPassword(User user) {
-        System.out.println(user.getPassword());
+        //System.out.println(user.getPassword());
 
         int counterSpecial = 0;
         int counterCapital = 0;
